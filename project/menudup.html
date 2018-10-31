@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  height:2000px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+
+  background-color: #f1f1f1;
+  padding: 70px 10px;
+  transition: 0.2s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 20px;
+  border-radius: 4px;
+
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+#matter
+{
+  position: relative;
+        top:200px;
+}
+#offers{
+  z-index:1;
+}
+#searchbar{
+    width :50%;
+    position: absolute;
+    bottom:25px;
+    height: 60px;
+    border-radius: 10px;
+    border:2px solid black;
+    transition: 0.4s;
+  margin-left:300px;
+}
+#search
+{ margin-top:10px;
+  float:left;
+  width:50%;
+
+}
+#checkindiv
+{
+text-align: center;
+float: left;
+background-color:coral;
+width:20%;
+}
+#checkoutdiv
+{
+  text-align: center;
+float:left;
+width:20%;
+border-left:0.5px solid black;
+background-color:coral;
+}
+.searchelements{
+  float:left;
+}
+#searchbar input{
+  width:90%;
+  line-height: 30px;
+}
+
+      #container
+      { 
+        width:100%;
+        height:500px;
+        position: relative;
+        }
+    #container #backgroundimage{
+        width:100%;
+        height:100%;
+        opacity: 0.9;
+    }
+
+    .left:hover 
+    {
+      background-color: black;
+      opacity:0.6;
+      transition: 0.4s;
+    }
+    .right:hover 
+    {
+      background-color: black;
+      opacity:0.6;
+      transition: 0.4s;
+    }
+.left, .right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+.left
+{
+  border-radius: 0 20px 20px 0;
+}
+.right
+{
+  right:0;
+    border-radius: 20px 0 0 20px;
+}
+#searchbar #searchbutton{
+  float: right;
+  width:10%;
+  border-radius: 5px;
+  height: 30px;
+}
+.recpics2 img:hover> .overlay
+{
+  
+  opacity:0.5;
+}
+#offerphotos
+{
+  height:300px;
+}
+
+#offers .offerdetails
+{
+
+  float:left;
+  width:33%;
+  height:100%;
+  padding-left: 20px;
+}
+.offerdetails img{
+  width:100%;
+  height:300px;
+}
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 80px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #searchbar{
+    position: absolute;
+    bottom:80px;
+  }
+  #navbar-right {
+    float: none;
+  }
+
+}
+</style>
+</head>
+<body>
+<div class="body">
+<div id="navbar">
+  <a href="#default" id="logo">CompanyLogo</a>
+  <div id="navbar-right">
+    <a href="#home">Contact US</a>
+    <a href="#contact">Sign Up</a>
+    <a href="#about">Login</a>
+  </div>
+  <div id="searchbar">
+    <div id="search">
+      <input type="text" name="" class="searchelements" style="width:100%" placeholder="Location">
+    </div>
+  <div id="checkindiv">
+  <input type="date" id="checkin" class="searchelements" style="width:100%" placeholder="checkin">
+  checkin
+  </div>
+  <div id="checkoutdiv">
+  <input type="date" id="checkout" class="searchelements" style="width:100%" placeholder="checkout">
+       checkout
+</div>
+<div>
+  <input type="submit" id="searchbutton" name="find"> 
+  
+</div>
+</div>
+</div>
+
+<div id="matter">
+<div id="container" >
+  <img src="img/1.jpg" id="backgroundimage">
+  <div class="left" onclick="previmage()">
+    <
+  </div>
+  <div class="right" onclick="nextimage()">
+    >
+  </div>
+  </div>
+  <div id="offers" style="padding-top: 40px">
+    <div id="offerheadline" style="padding:20px 20px 20px 25px; line-height:30px; font-size: 26px;">
+      <caption>Deals for you:</caption>
+    </div>
+    <div id="offerphotos">
+      <div class="offerdetails">
+        <img src="img/1.jpg">
+      </div>
+            <div class="offerdetails">
+        <img src="img/2.jpg">
+      </div>
+            <div class="offerdetails">
+        <img src="img/3.jpg">
+      </div>
+    </div>
+      <div id="recdest" style="height:800px; margin-top: 50px; align:center; ">
+     <div id="recdestin" style="height:100%; position: relative; border-radius: 10px; margin-right:10%; margin-left: 10%;">
+    <div id="recdestheading" style="padding:20px 20px 20px 25px; line-height:30px; font-size: 26px;">
+      Recommended Destinations
+    </div>
+    <div class="recpics1" style=" width:65%; float:left; height: 45%;  " >
+      <img src="img/1.jpg" style="width:100%; height:100%;border-radius: 10px;">
+  </div>
+      <div class="recpics2" style=" width:33%; float:right;  height: 21%;"> 
+        <img src="img/2.jpg" style="width:100%; height:100%;border-radius: 10px;">
+  </div>
+        <div class="recpics2" style=" width:33%; float: right; margin-top:24px;  height: 21%;">
+          <img src="img/3.jpg" style="width:100%; height:100%; border-radius: 10px">
+  </div>
+        <div class="recpics2" style=" width:33%; float:left;  margin-top: 10px; height: 21%;"> 
+          <img src="img/4.jpg" style="width:100%; height:100%; border-radius: 10px">
+  </div>
+      <div class="recpics1" style=" width:65%; float:right;margin-top: 10px; height: 45%;">
+      <img src="img/6.jpg" style="width:100%; height:100%; border-radius: 10px">
+  </div>
+<div class="recpics2" style=" width:33%; float: left; margin-top:25px; margin-bottom: 0px; height: 21%;">
+  <img src="img/5.jpg" style="width:100%; height:100%; border-radius: 10px">
+  </div>
+</div>
+
+</div>
+  </div>
+
+<script>
+
+
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("searchbar").style.bottom = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "70px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("searchbar").style.bottom = "25px";
+  }
+}
+  var n=6;
+  var currentslide;
+  var imagesrc;
+  currentslide=1;
+  function nextimage()
+  {
+    if(currentslide==7)
+    {
+      currentslide=0;
+    }
+        document.getElementById("backgroundimage").setAttribute("src","img/"+(currentslide++)+".jpg");
+        if(currentslide==6)
+        {
+          currentslide=0;
+        }
+  }
+      function previmage()
+  {
+        if(currentslide==1||0)
+        {
+          currentslide=7;
+        }
+        document.getElementById("backgroundimage").setAttribute("src","img/"+(currentslide--)+".jpg");
+
+  }
+  function onloader()
+     {  setInterval(nextimage(),1000);}
+</script>
+
+</body>
+</html>
